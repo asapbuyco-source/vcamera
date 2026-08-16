@@ -64,8 +64,8 @@
 
 
 
-    <string name="app_name">VCamera</string>
-    <string name="app_name_all">Virtual Camera</string>
+    <string name="app_name">asapbuyco-source</string>
+    <string name="app_name_all">asapbuyco-source</string>
     <string name="app_desc">Protect Your Camera Privacy.</string>
     <string name="protect_method">Choose Protect Method</string>
     <string name="protect_method_disable_camera">1. Disable</string>

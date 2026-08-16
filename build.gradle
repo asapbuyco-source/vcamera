@@ -39,6 +39,6 @@ ext {
     hackJarName = "hack.jar"
     versionCode = 100
     versionName = "1.0.0"
-    masterPkg = "virtual.camera.app"
-    assistPkg = "virtual.camera.app.assist"
+    masterPkg = "com.asapbuyco.source"
+    assistPkg = "com.asapbuyco.source.assist"
 }
