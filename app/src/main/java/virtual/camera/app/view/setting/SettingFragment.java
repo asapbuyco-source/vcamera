@@ -128,10 +128,9 @@ public class SettingFragment extends BaseFragment {
             fos = new FileOutputStream(outPath);
             is = getActivitySafe().getContentResolver().openInputStream(uri);
             byte[] buffer = new byte[1024];
-            int len = is.read(buffer);
-            while (len >= 0) {
-                fos.write(buffer);
-                len = is.read(buffer);
+            int len;
+            while ((len = is.read(buffer)) != -1) {
+                fos.write(buffer, 0, len);
             }
             fos.flush();
             fos.close();

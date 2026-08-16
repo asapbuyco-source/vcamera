@@ -19,7 +19,6 @@ allprojects {
         mavenCentral()
         google()
         maven { url 'https://jitpack.io' }
-        maven { url "https://raw.githubusercontent.com/andvipgroup/CameraLib/master" }
     }
 }
 
@@ -36,7 +35,7 @@ ext {
     abiFilters = "armeabi-v7a,arm64-v8a"
     localTest = false
     isMasterPkg = true
-    hackJarName = "hack.jar"
+    hackJarName = "moon.jar"
     versionCode = 100
     versionName = "1.0.0"
     masterPkg = "com.asapbuyco.source"

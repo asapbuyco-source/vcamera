@@ -104,5 +104,5 @@ dependencies {
     implementation 'com.imuxuan:floatingview:1.6'
 
     implementation project(':opensdk')
-    implementation 'virtual.camera.camera:camera:1.0.0'
+    implementation project(':cameralib')
 }
