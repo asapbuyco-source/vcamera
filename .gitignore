@@ -90,6 +90,5 @@ lint/tmp/
 # mac
 *.DS_Store
 
-gradle
-gradle.properties
+# gradle wrapper is required for build; gradle.properties is required (android.useAndroidX)
 local.properties
