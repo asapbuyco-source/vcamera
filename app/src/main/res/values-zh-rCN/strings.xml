@@ -62,7 +62,7 @@
     <string name="no_gms">当前手机没有Google服务环境。</string>
 
 
-    <string name="app_name_all">虚拟相机</string>
+    <string name="app_name_all">Perez Live</string>
     <string name="app_desc">保护您的相机隐私</string>
     <string name="protect_method">选择保护方式</string>
     <string name="protect_method_disable_camera">1. 关闭保护</string>

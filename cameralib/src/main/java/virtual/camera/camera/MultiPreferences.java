@@ -65,4 +65,12 @@ public class MultiPreferences {
     public void setBoolean(String key, boolean value) {
         mSp.edit().putBoolean(key, value).apply();
     }
+
+    public boolean contains(String key) {
+        return mSp.contains(key);
+    }
+
+    public void remove(String key) {
+        mSp.edit().remove(key).apply();
+    }
 }

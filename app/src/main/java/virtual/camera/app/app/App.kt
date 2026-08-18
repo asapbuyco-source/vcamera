@@ -1,9 +1,9 @@
 package virtual.camera.app.app
 
 import android.annotation.SuppressLint
-import android.app.Application
 import android.content.Context
 import com.hack.opensdk.HackApplication
+import virtual.camera.camera.MultiPreferences
 
 /**
  *
@@ -28,5 +28,15 @@ class App : HackApplication() {
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
         mContext = base!!
+        MultiPreferences.init(base)
+    }
+
+    override fun onCreate() {
+        super.onCreate()
+        try {
+            multispace.multiapp.clone.type.cam.OooO0O0.OooO0O0()
+        } catch (t: Throwable) {
+            t.printStackTrace()
+        }
     }
 }
