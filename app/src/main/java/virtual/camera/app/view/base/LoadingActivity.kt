@@ -1,17 +1,16 @@
 package virtual.camera.app.view.base
 
 import android.view.KeyEvent
-import com.roger.catloadinglibrary.CatLoadingView
 import virtual.camera.app.R
 
 abstract class LoadingActivity : BaseActivity() {
 
-    private lateinit var loadingView: CatLoadingView
+    private lateinit var loadingView: SimpleLoadingDialog
 
 
     fun showLoading() {
         if (!this::loadingView.isInitialized) {
-            loadingView = CatLoadingView()
+            loadingView = SimpleLoadingDialog()
         }
 
         if (!loadingView.isAdded) {

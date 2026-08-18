@@ -1,5 +1,6 @@
 include ':app'
 include ':opensdk'
 include ':cameralib'
+include ':rvadapter'
 
 rootProject.name = "VCamera"
