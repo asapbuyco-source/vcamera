@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class RVAdapter<T>(context: Context, private val factory: RVHolderFactory) :
+class RVAdapter<T : Any>(context: Context, private val factory: RVHolderFactory) :
     RecyclerView.Adapter<RVHolder<*>>() {
 
     private val mItems = mutableListOf<T>()
@@ -47,7 +47,7 @@ class RVAdapter<T>(context: Context, private val factory: RVHolderFactory) :
     override fun getItemCount(): Int = mItems.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RVHolder<*> {
-        val item = if (mItems.isEmpty()) {
+        val item: Any = if (mItems.isEmpty()) {
             Any()
         } else {
             mItems[viewType.coerceIn(mItems.indices)]
@@ -72,10 +72,12 @@ class RVAdapter<T>(context: Context, private val factory: RVHolderFactory) :
     }
 
     override fun onBindViewHolder(holder: RVHolder<*>, position: Int) {
-        holder.setContent(mItems[position], false, null)
+        @Suppress("UNCHECKED_CAST")
+        (holder as RVHolder<T>).setContent(mItems[position], false, null)
     }
 
     override fun onBindViewHolder(holder: RVHolder<*>, position: Int, payloads: MutableList<Any>) {
-        holder.setContent(mItems[position], false, payloads.firstOrNull())
+        @Suppress("UNCHECKED_CAST")
+        (holder as RVHolder<T>).setContent(mItems[position], false, payloads.firstOrNull())
     }
 }
