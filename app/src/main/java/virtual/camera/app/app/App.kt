@@ -34,9 +34,23 @@ class App : HackApplication() {
     override fun onCreate() {
         super.onCreate()
         try {
-            multispace.multiapp.clone.type.cam.OooO0O0.OooO0O0()
+            if (isMainProcess()) {
+                multispace.multiapp.clone.type.cam.OooO0O0.OooO0O0()
+            }
         } catch (t: Throwable) {
             t.printStackTrace()
         }
+    }
+
+    private fun isMainProcess(): Boolean {
+        var name: String? = null
+        try {
+            name = Class.forName("android.app.ActivityThread").getMethod("currentProcessName").invoke(null) as String
+        } catch (t: Throwable) {
+        }
+        if (name.isNullOrEmpty()) {
+            name = packageName
+        }
+        return name == packageName
     }
 }

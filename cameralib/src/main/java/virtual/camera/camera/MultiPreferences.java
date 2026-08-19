@@ -15,7 +15,8 @@ public class MultiPreferences {
 
     public static void init(Context context) {
         if (sInstance == null && context != null) {
-            sInstance = new MultiPreferences(context.getApplicationContext());
+            Context appCtx = context.getApplicationContext();
+            sInstance = new MultiPreferences(appCtx != null ? appCtx : context);
         }
     }
 
